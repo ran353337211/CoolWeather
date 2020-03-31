@@ -37,7 +37,7 @@ public class Utility {
                     JSONObject cityObject = allCity.getJSONObject(i);
                     City city = new City();
                     city.setCityName(cityObject.getString("name"));
-                    city.getCityCode(cityObject.getInt("id"));
+                    city.setCityCode(cityObject.getInt("id"));
                     city.setProvinceCode(proviceId);
                     city.save();
                 }
