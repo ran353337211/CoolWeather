@@ -29,7 +29,7 @@ public class Utility {
         }
         return false;
     }
-    public static boolean handleCityResponse(String response,int proviceId){
+    public static boolean handleCityResponse(String response,int provinceId){
         if (!TextUtils.isEmpty(response)){
             try {
                 JSONArray allCity = new JSONArray(response);
@@ -38,7 +38,7 @@ public class Utility {
                     City city = new City();
                     city.setCityName(cityObject.getString("name"));
                     city.setCityCode(cityObject.getInt("id"));
-                    city.setProvinceCode(proviceId);
+                    city.setProvinceId(provinceId);
                     city.save();
                 }
                 return true;
